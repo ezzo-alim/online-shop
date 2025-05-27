@@ -1,0 +1,326 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+
+  <!DOCTYPE html>
+  <html lang="ar">
+  <head>
+    <meta charset="UTF-8">
+    <title>HOME</title>
+  </head>
+  <body>
+  
+  
+  
+  <style>
+  
+</style>
+</head>
+<body>
+  <!DOCTYPE html>
+  <html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HOME</title>
+    <link rel="stylesheet" href="css/HOME.css">
+  </head>
+  <body>
+
+  <!-- شريط علوي مرتب -->
+  <div class="top-bar">
+    
+
+    <div class="logo">
+      <a href="HOME.html">
+        <img src="DRIP.png" alt="شعار DRIP" class="logo-animated">
+      </a>
+    </div>
+
+<head>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+...
+<div class="search-bar">
+  <input type="text" placeholder="ابحث عن منتج...">
+  <button type="submit">
+    <i class="fas fa-search"></i>
+  </button>
+</div>
+
+    
+    <div class="user-links">
+      <img src="like.png" alt="مفضلة">
+      <img src="bag.png" alt="حقيبتك">
+    </div>
+  </div>
+
+</body>
+</html>
+  
+  <nav>
+
+  <ul>
+    <li><a href="HOME.html">HOME</a></li>
+    <li><a href="NEWIN.html">NEW IN</a></li>
+    <li><a href="TRENDING.html">TRENDING</a></li>
+    <li><a href="BRANDS.html">BRANDS</a></li>
+    <li><a href="CLOTHING.html">CLOTHING</a></li>
+    <li><a href="ACCESSORIES.html">ACCESSORIES</a></li>
+      <li><a href="contact.html">CONTACT</a></li></a>
+
+  </ul>
+
+  </nav>
+
+  <section class="hero">
+    <p>Explore premium digital tools designed to increase your sales and grow your online presence fast.</p>
+    <div class="cta">
+      <a href="NEWIN.html">DRIP DEAL !</a>
+    </div>
+  </section>
+
+  <section class="urgency">
+    ⚡ Exclusive Offer: Save up to 50% Today Only!
+  </section>
+
+  <section class="video-banner">
+    <video id="bgVideo" autoplay muted loop preload="auto">
+      <source id="videoSource" src="y.mp4" type="video/mp4" />
+      متصفحك لا يدعم تشغيل الفيديو.
+    </video>
+  
+    <div class="text-lines">
+      <h1 class="hover-text" data-video="x.mp4">men section</h1>
+      <h1 class="hover-text" data-video="z.mp4">DRIP Zone </h1>
+      <h1 class="hover-text" data-video="v.mp4">women section</h1>
+    </div>
+  </section>
+  
+  <script>
+    const video = document.getElementById('bgVideo');
+    const source = document.getElementById('videoSource');
+  
+    const positions = {
+      "x.mp4": "center",
+      "z.mp4": "center",
+      "v.mp4": "center",
+      
+    };
+  
+    let returnIndex = 0 ;
+  
+    function updateVideo(src) {
+      source.src = src;
+      video.load();
+      video.play();
+      video.style.objectPosition = positions[src] || "center";
+    }
+  
+    function getNextReturnVideo() {
+      if (source.src.includes(src)) return; // ✅ لا تعيد التحميل إن كان نفس الفيديو
+
+      const next = returnVideos[returnIndex];
+      returnIndex = (returnIndex + 1) % returnVideos.length;
+      return next;
+    }
+  
+    document.querySelectorAll('.hover-text').forEach(el => {
+      const newVideo = el.getAttribute('data-video');
+      el.addEventListener('mouseenter', () => {
+        updateVideo(newVideo);
+      });
+      el.addEventListener('mouseleave', () => {
+        const nextVideo = getNextReturnVideo();
+        updateVideo(nextVideo);
+      });
+    });
+  
+    // تعيين أول فيديو عند التحميل
+    updateVideo("y.mp4");
+  </script>
+  
+    
+
+
+    
+
+<script>
+  // إضافة التأثير عند التمرير
+  document.addEventListener('scroll', function() {
+    const elements = document.querySelectorAll('.scroll-reveal');
+    elements.forEach(element => {
+      const position = element.getBoundingClientRect().top;
+      const screenPosition = window.innerHeight / 1.5;
+      if (position < screenPosition) {
+        element.classList.add('visible');
+      }
+    });
+  });
+</script>
+
+
+<!-- معرض الصور المتغيرة -->
+<div class="hover-gallery">
+  <div class="images-container">
+
+    <div class="image-wrapper">
+      <img src="10.png" alt="Gucci" class="first">
+      <img src="7.png" alt="Gucci Hover" class="second">
+    </div>
+
+    <div class="image-wrapper">
+      <img src="11.png" alt="Dior" class="first">
+      <img src="8.png" alt="Dior Hover" class="second">
+    </div>
+
+    <div class="image-wrapper">
+      <img src="12.png" alt="Fendi" class="first">
+      <img src="9.png" alt="Fendi Hover" class="second">
+    </div>
+
+    <div class="image-wrapper">
+      <img src="13.png" alt="Armani" class="first">
+      <img src="14.png" alt="Armani Hover" class="second">
+    </div>
+  </div>
+</div>
+
+<!-- مسافة فاصلة -->
+<div style="height: 100px;"></div>
+
+<!-- المنتجات الثابتة -->
+<section class="product-section">
+ <!-- المنتج الأول -->
+<div class="product" data-id="1">
+  <div class="image-container">
+    <img class="product-image" id="product-image-1" src="product1-front-black.png" alt="Product">
+  </div>
+  <h3>Over-Size</h3>
+  <p>Women Section</p>
+<p class="price">
+ 
+  <span style="text-decoration: line-through; color: gray;">$29.99</span>
+  <span style="color: #3235f3; font-weight: bold;">$19.99</span>
+</p>
+
+ <div class="buy-now">
+  <a href="CLOTHING.html" class="buy-button">🛒  SHOP NOW</a>
+</div>
+
+
+    <div class="color-options">
+      <label>Color:</label>
+      <button onclick="changeColor('red', 1)" style="background: rgb(235, 225, 208);"></button>
+      <button onclick="changeColor('black', 1)" style="background: black;"></button>
+      <button onclick="changeColor('blue', 1)" style="background: rgb(70, 108, 149);"></button>
+    </div>
+  </div>
+</div>
+
+<!-- المنتج الثاني -->
+<div class="product" data-id="2">
+  <div class="image-container">
+    <img class="product-image" id="product-image-2" src="product2-front-black.png" alt="Product">
+  </div>
+  <h3>Over-Size</h3>
+  <p>Men Section</p>
+  <p class="price">$29.99</p>
+
+  <p class="price">
+ 
+  
+
+ <div class="buy-now">
+  <a href="CLOTHING.html" class="buy-button">🛒 SHOP NOW</a>
+</div>
+
+    <div class="color-options">
+      <label>Color:</label>
+      <button onclick="changeColor('red', 2)" style="background: rgb(235, 225, 208);"></button>
+      <button onclick="changeColor('black', 2)" style="background: black;"></button>
+      <button onclick="changeColor('blue', 2)" style="background: rgb(70, 108, 149);"></button>
+    </div>
+  </div>
+</div>
+
+<!-- سكربت لتبديل الصور -->
+<script>
+  const productState = {
+    1: { color: 'black', view: 'front' },
+    2: { color: 'black', view: 'front' }
+  };
+
+  function updateProductImage(productId) {
+    const state = productState[productId];
+    const image = document.getElementById(`product-image-${productId}`);
+
+    let fileName = '';
+
+    if (state.view === 'front') {
+      fileName = `product${productId}-front-${state.color}.png`;
+    } else if (state.view === 'back') {
+      fileName = `product${productId}-back-${state.color}.png`;
+    } else if (state.view === 'side') {
+      // استخدم front لو ما عندك صور side
+      fileName = `product${productId}-front-${state.color}.png`;
+    }
+
+    image.src = fileName;
+  }
+
+  function changeColor(color, productId) {
+    productState[productId].color = color;
+    updateProductImage(productId);
+  }
+
+  function changeView(view, productId) {
+    productState[productId].view = view;
+    updateProductImage(productId);
+  }
+</script>
+
+
+
+    <!-- التعليقات -->
+    <section class="reviews">
+      <h2>What Our Customers Say</h2>
+
+      <div class="review">
+        <p style="font-style: italic;">"SmartSell tools helped me launch my first product online and it sold out in 3 days! Highly recommend."</p>
+        <p style="text-align: center; font-weight: bold;">– Sarah M.</p>
+      </div>
+
+      <div class="review">
+        <p style="font-style: italic;">"Clean design, great customer service, and very easy to use. I love how it simplified everything."</p>
+        <p style="text-align: center; font-weight: bold;">– Jamal R.</p>
+      </div>
+
+      <div class="review">
+        <p style="font-style: italic;">"Great tools with excellent support. I even received bonus templates. Worth every dollar!"</p>
+        <p style="text-align: center; font-weight: bold;">– Lina K.</p>
+      </div>
+
+      <h3 style="text-align: center;">Leave Your Review</h3>
+      <form>
+        <input type="text" placeholder="Your Name" required />
+        <textarea placeholder="Your Comment" rows="4" required></textarea>
+        <button type="submit">Submit Comment</button>
+      
+      
+      
+      </form>
+    </section>
+
+
+  <!-- الفوتر -->
+  <footer>
+  <div class="footer-logo">
+    <a href="HOME.html">
+      <img src="DRIP.png" alt="DRIP">
+    </a>
+  </div>
+  <p>&copy; BOOST YOUR ONLINE BUSINESS</p>
+</footer>

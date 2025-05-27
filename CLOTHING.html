@@ -1,0 +1,450 @@
+<!DOCTYPE html>
+<html lang="ar">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>NEW IN</title>
+<link rel="stylesheet" href="css/CLOTHING.css" />
+</head>
+<body>
+
+  <div class="top-bar">
+    <a href="CLOTHING.html"><img src="DRIP.png" alt="DRIP Logo" class="logo-animated" /></a>
+
+    <div class="search-bar">
+      <input type="text" placeholder="ابحث عن منتج..." aria-label="ابحث عن منتج" />
+      <button><img src="icon.png" alt="بحث" width="16" height="16" /></button>
+    </div>
+
+    <div class="user-links">
+      <img src="like.png" alt="مفضلة" />
+      <img src="bag.png" alt="حقيبتك" />
+    </div>
+  </div>
+
+  <nav>
+    <a href="HOME.html">HOME</a>
+    <a href="newin.html">NEW IN</a>
+    <a href="trending.html">TRENDING</a>
+    <a href="brands.html">BRANDS</a>
+    <a href="CLOTHING.html">CLOTHING</a>
+    <a href="accessories.html">ACCESSORIES</a>
+    <a href="contact.html">CONTACT</a>
+  </nav>
+
+  <section class="hero">
+    <p>Explore premium digital tools designed to increase your sales and grow your online presence fast.</p>
+    <div class="cta">
+      <a href="CLOTHING.html">GET OUR OFFER</a>
+    </div>
+  </section>
+  
+  
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Hover Product</title>
+  
+
+<!-- فلتر التصنيفات -->
+<div class="filter-bar">
+  <button class="active" onclick="filterProducts('all')">All</button>
+  <button onclick="filterProducts('men')">Men</button>
+  <button onclick="filterProducts('women')">Women</button>
+ <button onclick="showSoonMessage(event)">
+  <span class="old-price">Kids</span>
+  <span class="soon-badge">Soon</span>
+</button>
+
+  <!-- Modal الرسالة -->
+<div id="soonModal" class="modal">
+  <div class="modal-content">
+    <span class="close" onclick="closeModal()">&times;</span>
+    <p>We appreciate your time.<br>Our kids area will be available soon.</p>
+  </div>
+</div>
+
+  <script>function showSoonMessage(event) {
+  event.stopPropagation(); // يمنع تنفيذ أي أوامر تصفية
+  document.getElementById("soonModal").style.display = "block";
+}
+
+function closeModal() {
+  document.getElementById("soonModal").style.display = "none";
+}
+
+window.onclick = function(event) {
+  const modal = document.getElementById("soonModal");
+  if (event.target === modal) {
+    modal.style.display = "none";
+  }
+}
+</script>
+  
+  </button>
+</div>
+
+
+<!-- شبكة المنتجات -->
+<div class="product-grid" id="productGrid">
+  <!-- Women -->
+  <div class="product-card" data-category="women">
+    <div class="image-container">
+      <img class="product-img front" src="product1-front.png" alt="Front View">
+      <img class="product-img back" src="product1-back.png" alt="Back View">
+    </div>
+    <div class="product-info">
+      <h3>White Ribbed Vest</h3>
+      <p>Elegant ribbed vest in white</p>
+      <p class="price"><span class="old-price">$29.99</span><span class="new-price">$19.99</span></p>
+      <a class="buy-now-btn" href="CLOTHING.html">Buy Now</a>
+    </div>
+  </div>
+
+
+  
+  <!-- Men -->
+  <div class="product-card" data-category="men">
+    <div class="image-container">
+      <img class="product-img front" src="product2-front.png" alt="Front View">
+      <img class="product-img back" src="product2-back.png" alt="Back View">
+    </div>
+    <div class="product-info">
+      <h3>Oversized Black T-Shirt</h3>
+      <p>Loose fit for daily comfort</p>
+      <p class="price"><span class="old-price">$25.00</span><span class="new-price">$18.00</span></p>
+      <a class="buy-now-btn" href="CLOTHING.html">Buy Now</a>
+    </div>
+  </div>
+
+  <div class="product-card" data-category="women">
+    <div class="image-container">
+      <img class="product-img front" src="product3-front.png" alt="Front View">
+      <img class="product-img back" src="product3-back.png" alt="Back View">
+    </div>
+    <div class="product-info">
+      <h3>Black Urban Jacket</h3>
+      <p>Street style with confidence</p>
+      <p class="price"><span class="old-price">$45.00</span><span class="new-price">$33.00</span></p>
+      <a class="buy-now-btn" href="CLOTHING.html">Buy Now</a>
+    </div>
+  </div>
+
+  <!-- Women -->
+  <div class="product-card" data-category="men">
+    <div class="image-container">
+      <img class="product-img front" src="product4-front.png" alt="Front View">
+      <img class="product-img back" src="product4-back.png" alt="Back View">
+    </div>
+    <div class="product-info">
+      <h3>Oversized Shirt</h3>
+      <p>Soft cotton oversize fit</p>
+      <p class="price"><span class="old-price">$31.99</span><span class="new-price">$21.99</span></p>
+      <a class="buy-now-btn" href="CLOTHING.html">Buy Now</a>
+    </div>
+  </div>
+
+  <!-- Jackets -->
+  <div class="product-card" data-category="women">
+    <div class="image-container">
+      <img class="product-img front" src="product5-front.png" alt="Front View">
+      <img class="product-img back" src="product5-back.png" alt="Back View">
+    </div>
+    <div class="product-info">
+      <h3>Drip Jacket</h3>
+      <p>Urban black jacket with style</p>
+      <p class="price"><span class="old-price">$45.00</span><span class="new-price">$30.00</span></p>
+      <a class="buy-now-btn" href="CLOTHING.html">Buy Now</a>
+    </div>
+  </div>
+
+  <!-- Men -->
+  <div class="product-card" data-category="men">
+    <div class="image-container">
+      <img class="product-img front" src="product6-front.png" alt="Front View">
+      <img class="product-img back" src="product6-back.png" alt="Back View">
+    </div>
+    <div class="product-info">
+      <h3>Essential T-Shirt</h3>
+      <p>Everyday comfort fit</p>
+      <p class="price"><span class="old-price">$22.00</span><span class="new-price">$16.00</span></p>
+      <a class="buy-now-btn" href="CLOTHING.html">Buy Now</a>
+    </div>
+  </div>
+</div>
+
+<!-- JavaScript للتصفية -->
+<script>
+  function filterProducts(category) {
+    const cards = document.querySelectorAll('.product-card');
+    document.querySelectorAll('.filter-bar button').forEach(btn => btn.classList.remove('active'));
+    event.target.classList.add('active');
+
+    cards.forEach(card => {
+      const type = card.dataset.category;
+      if (category === 'all' || type === category) {
+        card.style.display = 'block';
+      } else {
+        card.style.display = 'none';
+      }
+    });
+  }
+</script>
+
+
+
+
+<!-- ✅ المنتجات الإضافية (تظهر دائمًا بدون فلتر) -->
+<div class="extra-products">
+  <div class="product-card">
+    <div class="image-container">
+      <img class="product-img front" src="product11-front.png" alt="Front View">
+      <img class="product-img back" src="product11-back.png" alt="Back View">
+    </div>
+    <div class="product-info">
+      <h3>Relaxed Fit Tee</h3>
+      <p>Everyday essential</p>
+      <p class="price"><span class="old-price">$20.00</span><span class="new-price">$14.00</span></p>
+      <a class="buy-now-btn" href="CLOTHING.html">Buy Now</a>
+    </div>
+  </div>
+
+  <div class="product-card">
+    <div class="image-container">
+      <img class="product-img front" src="product12-front.png" alt="Front View">
+      <img class="product-img back" src="product12-back.png" alt="Back View">
+    </div>
+    <div class="product-info">
+      <h3>Beige Lounge Set</h3>
+      <p>Soft & breathable</p>
+      <p class="price"><span class="old-price">$32.00</span><span class="new-price">$22.00</span></p>
+      <a class="buy-now-btn" href="CLOTHING.html">Buy Now</a>
+    </div>
+  </div>
+
+  <div class="product-card">
+    <div class="image-container">
+      <img class="product-img front" src="product13-front.png" alt="Front View">
+      <img class="product-img back" src="product13-back.png" alt="Back View">
+    </div>
+    <div class="product-info">
+      <h3>Drip Denim Jacket</h3>
+      <p>Signature oversized fit</p>
+      <p class="price"><span class="old-price">$48.00</span><span class="new-price">$35.00</span></p>
+      <a class="buy-now-btn" href="CLOTHING.html">Buy Now</a>
+    </div>
+  </div>
+
+  <div class="product-card">
+    <div class="image-container">
+      <img class="product-img front" src="product14-front.png" alt="Front View">
+      <img class="product-img back" src="product14-back.png" alt="Back View">
+    </div>
+    <div class="product-info">
+      <h3>Basic Hoodie</h3>
+      <p>Unisex streetwear</p>
+      <p class="price"><span class="old-price">$40.00</span><span class="new-price">$28.00</span></p>
+      <a class="buy-now-btn" href="CLOTHING.html">Buy Now</a>
+    </div>
+  </div>
+
+  <div class="product-card">
+    <div class="image-container">
+      <img class="product-img front" src="product15-front.png" alt="Front View">
+      <img class="product-img back" src="product15-back.png" alt="Back View">
+    </div>
+    <div class="product-info">
+      <h3>Utility Shirt</h3>
+      <p>Modern oversized cut</p>
+      <p class="price"><span class="old-price">$34.00</span><span class="new-price">$24.00</span></p>
+      <a class="buy-now-btn" href="CLOTHING.html">Buy Now</a>
+    </div>
+  </div>
+
+  <!-- انسخ البلوك أعلاه وغير البيانات لتصل إلى 10 -->
+</div>
+
+<!-- ✅ CSS لعرض المنتجات الجديدة -->
+<style>
+.extra-products {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 20px;
+  margin: 50px auto;
+}
+
+.extra-products .product-card {
+  width: 220px;
+  border: 1px solid #ccc;
+  border-radius: 12px;
+  overflow: hidden;
+  text-align: center;
+  font-family: Arial, sans-serif;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.extra-products .image-container {
+  position: relative;
+  width: 100%;
+  height: 300px;
+}
+
+.extra-products .product-img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: opacity 0.4s ease;
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
+.extra-products .product-img.back {
+  opacity: 0;
+}
+
+.extra-products .image-container:hover .product-img.front {
+  opacity: 0;
+}
+
+.extra-products .image-container:hover .product-img.back {
+  opacity: 1;
+}
+</style>
+
+
+<!-- ✅ المنتجات الإضافية (تظهر دائمًا بدون فلتر) -->
+<div class="extra-products">
+  <div class="product-card">
+    <div class="image-container">
+      <img class="product-img front" src="product12-front.png" alt="Front View">
+      <img class="product-img back" src="product12-back.png" alt="Back View">
+    </div>
+    <div class="product-info">
+      <h3>Relaxed Fit Tee</h3>
+      <p>Everyday essential</p>
+      <p class="price"><span class="old-price">$20.00</span><span class="new-price">$14.00</span></p>
+      <a class="buy-now-btn" href="CLOTHING.html">Buy Now</a>
+    </div>
+  </div>
+
+  <div class="product-card">
+    <div class="image-container">
+      <img class="product-img front" src="product13-front.png" alt="Front View">
+      <img class="product-img back" src="product13-back.png" alt="Back View">
+    </div>
+    <div class="product-info">
+      <h3>Beige Lounge Set</h3>
+      <p>Soft & breathable</p>
+      <p class="price"><span class="old-price">$32.00</span><span class="new-price">$22.00</span></p>
+      <a class="buy-now-btn" href="CLOTHING.html">Buy Now</a>
+    </div>
+  </div>
+
+  <div class="product-card">
+    <div class="image-container">
+      <img class="product-img front" src="product14-front.png" alt="Front View">
+      <img class="product-img back" src="product14-back.png" alt="Back View">
+    </div>
+    <div class="product-info">
+      <h3>Drip Denim Jacket</h3>
+      <p>Signature oversized fit</p>
+      <p class="price"><span class="old-price">$48.00</span><span class="new-price">$35.00</span></p>
+      <a class="buy-now-btn" href="CLOTHING.html">Buy Now</a>
+    </div>
+  </div>
+
+  <div class="product-card">
+    <div class="image-container">
+      <img class="product-img front" src="product15-front.png" alt="Front View">
+      <img class="product-img back" src="product15-back.png" alt="Back View">
+    </div>
+    <div class="product-info">
+      <h3>Basic Hoodie</h3>
+      <p>Unisex streetwear</p>
+      <p class="price"><span class="old-price">$40.00</span><span class="new-price">$28.00</span></p>
+      <a class="buy-now-btn" href="CLOTHING.html">Buy Now</a>
+    </div>
+  </div>
+
+  <div class="product-card">
+    <div class="image-container">
+      <img class="product-img front" src="product16-front.png" alt="Front View">
+      <img class="product-img back" src="product16-back.png" alt="Back View">
+    </div>
+    <div class="product-info">
+      <h3>Utility Shirt</h3>
+      <p>Modern oversized cut</p>
+      <p class="price"><span class="old-price">$34.00</span><span class="new-price">$24.00</span></p>
+      <a class="buy-now-btn" href="CLOTHING.html">Buy Now</a>
+    </div>
+  </div>
+
+  <!-- انسخ البلوك أعلاه وغير البيانات لتصل إلى 10 -->
+</div>
+
+<!-- ✅ CSS لعرض المنتجات الجديدة -->
+<style>
+.extra-products {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 20px;
+  margin: 50px auto;
+}
+
+.extra-products .product-card {
+  width: 220px;
+  border: 1px solid #ccc;
+  border-radius: 12px;
+  overflow: hidden;
+  text-align: center;
+  font-family: Arial, sans-serif;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.extra-products .image-container {
+  position: relative;
+  width: 100%;
+  height: 300px;
+}
+
+.extra-products .product-img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: opacity 0.4s ease;
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
+.extra-products .product-img.back {
+  opacity: 0;
+}
+
+.extra-products .image-container:hover .product-img.front {
+  opacity: 0;
+}
+
+.extra-products .image-container:hover .product-img.back {
+  opacity: 1;
+}
+</style>
+
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+
